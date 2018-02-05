@@ -1,0 +1,38 @@
+{
+  "name": "eau-de-graphql",
+  "version": "1.0.0",
+  "description": "A simple GraphQL client",
+  "author": "Eric Baer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baer/eau-de-graphql.git"
+  },
+  "bugs": {
+    "url": "https://github.com/baer/eau-de-graphql/issues"
+  },
+  "homepage": "https://github.com/baer/eau-de-graphql#readme",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel index.js -d lib",
+    "precommit": "lint-staged",
+    "prettier": "prettier --write '**/*.{js,json,md}'"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "husky": "^0.14.3",
+    "isomorphic-fetch": "^2.2.1",
+    "lint-staged": "^6.1.0",
+    "prettier": "1.10.2"
+  },
+  "keywords": [
+    "GraphQL"
+  ]
+}
